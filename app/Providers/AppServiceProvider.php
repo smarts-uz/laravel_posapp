@@ -22,12 +22,12 @@ class AppServiceProvider extends ServiceProvider
         ini_set('memory_limit', '-1');
         set_time_limit(0);
 
-        //force https
+   /*     //force https
         $url = parse_url(config('app.url'));
         
         if($url['scheme'] == 'https'){
            \URL::forceScheme('https');
-        }
+        }*/
 
         if (request()->has('lang')) {
             \App::setLocale(request()->get('lang'));
